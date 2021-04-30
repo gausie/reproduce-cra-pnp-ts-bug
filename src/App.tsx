@@ -2,6 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import loadable from "@loadable/component";
+
+const Example = loadable(() => import("./Example"));
+
 function App() {
   return (
     <div className="App">
@@ -19,6 +23,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Example />
     </div>
   );
 }
